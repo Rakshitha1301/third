@@ -1,0 +1,23 @@
+trigger:
+- master
+
+pool:
+  vmImage: 'windows-latest'  
+
+variables:
+  - group: 'Rakshitha1'
+
+ 
+  
+
+
+stages:
+  - stage: PrintStage
+    displayName: 'Print Stage'
+    jobs:
+      - template: child.yml  
+        parameters:
+          A: "Hi"
+          B: "Hello"
+          C: "Hai"
+          D: "hiee"
